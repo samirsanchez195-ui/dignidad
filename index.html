@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorial Ciudadano del Pueblo Colombiano | Coadyuvancia Acción de Tutela</title>
+  <meta name="description" content="Respaldo ciudadano como coadyuvantes a la impugnación formulada por el exjuez Dr. Gabriel Jorge Triana Perdomo ante la Corte Suprema de Justicia. Rad. 11001-2203-000-2026-03364-00.">
+  <meta property="og:title" content="Memorial Ciudadano del Pueblo Colombiano | Coadyuvancia Tutela">
+  <meta property="og:description" content="Suma tu firma en defensa de la Constitución y los derechos fundamentales. Coadyuvancia ante la Sala de Casación Civil de la Corte Suprema de Justicia.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images.jpeg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070e1c',
+              navy: '#0f1f3d',
+              accent: '#c68a2c',
+              gold: '#f59e0b',
+              alert: '#b91c1c'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c68a2c'><path d='M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10h2v4h-2zm0 6h2v2h-2z'/></svg>">
+</head>
+<body class="text-slate-800 bg-slate-50 antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- Barra de progreso de lectura superior -->
+  <div id="reading-progress"></div>
+
+  <!-- Barra Superior de Urgencia Institucional -->
+  <div class="bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white text-xs md:text-sm py-2 px-4 shadow-md sticky top-0 z-50 border-b border-amber-600/30">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-red-600 text-white animate-pulse">
+          URGENTE
+        </span>
+        <span class="font-medium text-slate-200">
+          Trámite de 2ª Instancia • Sala de Casación Civil • Corte Suprema de Justicia
+        </span>
+        <span class="hidden sm:inline text-amber-300 font-mono text-xs">
+          (Rad. 11001-2203-000-2026-03364-00)
+        </span>
+      </div>
+      <div class="flex items-center space-x-3 text-xs">
+        <a href="#firmar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1 rounded shadow transition flex items-center gap-1.5">
+          <i class="fas fa-file-signature"></i> Firmar Coadyuvancia
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación Principal -->
+  <nav class="bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white sticky top-9 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo / Marca -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-red-700 flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+            <i class="fas fa-balance-scale text-lg"></i>
+          </div>
+          <div>
+            <span class="font-display-title text-base sm:text-lg font-bold tracking-wider text-slate-100 block leading-tight">
+              MEMORIAL CIUDADANO
+            </span>
+            <span class="text-[11px] text-amber-400 font-medium tracking-wide block">
+              DEFENSA CONSTITUCIONAL • COLOMBIA
+            </span>
+          </div>
+        </a>
+
+        <!-- Menú Escritorio -->
+        <div class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-300">
+          <a href="#accionante" class="hover:text-amber-400 transition">El Accionante</a>
+          <a href="#motivos" class="hover:text-amber-400 transition">Exposición de Motivos</a>
+          <a href="#peticiones" class="hover:text-amber-400 transition">Peticiones</a>
+          <a href="#memorial-reader" class="hover:text-amber-400 transition">Memorial Completo</a>
+          <a href="#difusion" class="hover:text-amber-400 transition">Difusión</a>
+          <a href="#firmar" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-red-600/30 transition flex items-center gap-2">
+            <i class="fas fa-pen-nib text-amber-300"></i> Coadyuvar Aquí
+          </a>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <div class="flex lg:hidden items-center space-x-2">
+          <a href="#firmar" class="bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded shadow">
+            Firmar
+          </a>
+          <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 focus:outline-none" aria-label="Abrir menú de navegación">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-5 space-y-3 text-sm">
+      <a href="#accionante" class="block text-slate-300 hover:text-amber-400 py-1">El Accionante (Dr. Triana)</a>
+      <a href="#motivos" class="block text-slate-300 hover:text-amber-400 py-1">Exposición de Motivos Jurídicos</a>
+      <a href="#peticiones" class="block text-slate-300 hover:text-amber-400 py-1">Peticiones a la Corte Suprema</a>
+      <a href="#memorial-reader" class="block text-slate-300 hover:text-amber-400 py-1">Texto Íntegro del Memorial</a>
+      <a href="#difusion" class="block text-slate-300 hover:text-amber-400 py-1">Difundir en Redes</a>
+      <a href="#firmar" class="block bg-red-600 text-center text-white font-bold py-2 rounded-lg mt-2">
+        <i class="fas fa-pen-nib mr-1"></i> Ir al Formulario de Firma
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="bg-hero-pattern text-white pt-14 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Cinta tricolor colombiana sutil -->
+      <div class="tricolor-bar w-full mb-8 rounded-full opacity-80"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Columna de Texto -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+            <i class="fas fa-landmark text-amber-400"></i> Artículo 13 Decreto 2591 de 1991 • Coadyuvancia
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display-title leading-tight tracking-wide">
+            MEMORIAL CIUDADANO DEL PUEBLO COLOMBIANO
+          </h1>
+
+          <p class="text-lg sm:text-xl text-amber-200/90 font-medium">
+            En respaldo incondicional y como coadyuvantes a la impugnación presentada por el jurista y exjuez <strong class="text-white">Dr. Gabriel Jorge Triana Perdomo</strong>.
+          </p>
+
+          <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-4 sm:p-5 text-sm space-y-2 text-slate-300 backdrop-blur">
+            <div class="flex items-start gap-2">
+              <i class="fas fa-gavel text-amber-400 mt-1"></i>
+              <div>
+                <span class="text-slate-400">Trámite judicial:</span>
+                <strong class="text-white"> Segunda Instancia de la Acción de Tutela</strong>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <i class="fas fa-fingerprint text-amber-400 mt-1"></i>
+              <div>
+                <span class="text-slate-400">Radicado Oficial:</span>
+                <span class="font-mono text-amber-300 font-semibold">11001-2203-000-2026-03364-00</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <i class="fas fa-building-columns text-amber-400 mt-1"></i>
+              <div>
+                <span class="text-slate-400">Corporación Competente:</span>
+                <span class="text-slate-200"> Sala de Casación Civil de la <strong>Honorable Corte Suprema de Justicia</strong></span>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <i class="fas fa-users-slash text-red-400 mt-1"></i>
+              <div class="text-xs sm:text-sm">
+                <span class="text-slate-400">Accionados:</span>
+                <span class="text-slate-200"> CNE, Registraduría Nacional, Fiscalía General y vinculado <strong>Abelardo Gabriel de la Espriella Otero</strong> (actual Presidente de la República) y otros.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botones de Acción Inmediata -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <a href="#firmar" class="glowing-btn bg-red-600 hover:bg-red-500 text-white text-center font-bold px-7 py-4 rounded-xl text-base shadow-xl flex items-center justify-center gap-3">
+              <i class="fas fa-pen-to-square text-amber-300 text-lg"></i>
+              <span>¡FIRMAR COMO COADYUVANTE!</span>
+            </a>
+            <button onclick="openModal('memorial-modal')" class="bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 text-center font-semibold px-6 py-4 rounded-xl text-base transition flex items-center justify-center gap-2">
+              <i class="fas fa-file-lines text-amber-400"></i>
+              <span>Ver Memorial Completo</span>
+            </button>
+          </div>
+
+          <!-- Compartir Rápido -->
+          <div class="flex items-center gap-3 text-xs text-slate-400 pt-2">
+            <span>Difundir iniciativa:</span>
+            <button onclick="shareOnWhatsApp()" class="text-green-400 hover:text-green-300 flex items-center gap-1 font-semibold">
+              <i class="fab fa-whatsapp text-base"></i> WhatsApp
+            </button>
+            <span class="text-slate-600">•</span>
+            <button onclick="shareOnTwitter()" class="text-sky-400 hover:text-sky-300 flex items-center gap-1 font-semibold">
+              <i class="fab fa-x-twitter text-base"></i> X / Twitter
+            </button>
+            <span class="text-slate-600">•</span>
+            <button onclick="copyFormLink()" class="text-amber-400 hover:text-amber-300 flex items-center gap-1 font-semibold">
+              <i class="fas fa-link"></i> Copiar Enlace
+            </button>
+          </div>
+        </div>
+
+        <!-- Columna Visual con Imagen Editorial -->
+        <div class="lg:col-span-5">
+          <div class="relative group">
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-red-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+            <div class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+              <img src="images.jpeg" alt="Alegoría de la Balanza de la Justicia en la Plaza de Bolívar frente al Congreso de la República" class="w-full h-auto object-cover max-h-[420px] filter contrast-105">
+              <div class="p-4 bg-gradient-to-t from-slate-950 via-slate-900 to-slate-900/90 text-xs border-t border-slate-800">
+                <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+                  <span><i class="fas fa-scale-unbalanced text-sm mr-1"></i> Justicia y Estado de Derecho</span>
+                  <span class="bg-red-950/80 text-red-300 px-2 py-0.5 rounded border border-red-800 text-[10px]">COADYUVANCIA NACIONAL</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                  "Comparecemos en condición de coadyuvantes por cuanto las vulneraciones a los derechos fundamentales y las amenazas nos afectan a nosotros, a nuestras familias y a toda la ciudadanía colombiana."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE MÉTRICAS Y DATOS CLAVE -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Tarjeta 1 -->
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="text-red-600 text-3xl mb-2">
+            <i class="fas fa-file-circle-xmark"></i>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900 stat-number" data-target="3000000" data-prefix="+">
+            +3.000.000
+          </div>
+          <div class="text-sm font-bold text-slate-700 mt-1">Firmas con Presuntas Irregularidades</div>
+          <p class="text-xs text-slate-500 mt-1">De aprox. 5 millones presentadas ante la Registraduría sin debida depuración.</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="text-amber-600 text-3xl mb-2">
+            <i class="fas fa-sack-dollar"></i>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900 stat-number" data-target="14000" data-prefix="$" data-suffix=" M">
+            $14.000 M
+          </div>
+          <div class="text-sm font-bold text-slate-700 mt-1">Gasto en Posesión Militar</div>
+          <p class="text-xs text-slate-500 mt-1">Recursos públicos ejecutados al mover el acto a guarnición militar sin aval del Congreso.</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="text-blue-700 text-3xl mb-2">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900 stat-number" data-target="21" data-suffix=" Días">
+            21 Días
+          </div>
+          <div class="text-sm font-bold text-slate-700 mt-1">De Violaciones Continuas</div>
+          <p class="text-xs text-slate-500 mt-1">En menos de un mes de mandato se han vulnerado normas soberanas y constitucionales.</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="text-emerald-600 text-3xl mb-2">
+            <i class="fas fa-tower-broadcast"></i>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900 stat-number" data-target="20" data-suffix=" Emisoras">
+            20 Emisoras
+          </div>
+          <div class="text-sm font-bold text-slate-700 mt-1">Emisoras de Paz Silenciadas</div>
+          <p class="text-xs text-slate-500 mt-1">Creadas por el Acuerdo Final de Paz y afectadas tras la reorganización de RTVC.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL ACCIONANTE: DR. GABRIEL JORGE TRIANA PERDOMO -->
+  <section id="accionante" class="py-16 bg-slate-100 border-b border-slate-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200/80">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <!-- Columna Lateral Distintiva -->
+          <div class="lg:col-span-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-8 text-white flex flex-col justify-between">
+            <div>
+              <div class="inline-block px-3 py-1 rounded bg-amber-500/20 border border-amber-400 text-amber-300 text-xs font-bold uppercase tracking-wider mb-4">
+                LEGITIMIDAD Y PROBIDAD
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-bold font-display-title text-white leading-snug">
+                Dr. Gabriel Jorge Triana Perdomo
+              </h2>
+              <p class="text-amber-400 text-sm font-semibold mt-1">
+                Accionante de la Tutela e Ilustre Jurista
+              </p>
+              <div class="mt-6 space-y-4 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-amber-400 shrink-0">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <span><strong>41 Años de Servicio Judicial</strong> como Juez de la República, principalmente en el área penal.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span>Calificación de <strong>EXCELENCIA (97/100)</strong> en sus servicios judiciales para el año 2023.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-blue-400 shrink-0">
+                    <i class="fas fa-shield-halved"></i>
+                  </div>
+                  <span><strong>Hoja de vida intachable</strong>: Sin ningún tipo de sanción en el ejercicio de sus funciones públicas.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-purple-400 shrink-0">
+                    <i class="fas fa-landmark-dome"></i>
+                  </div>
+                  <span>Preseleccionado por la Presidencia del Consejo Superior de la Judicatura (22 de julio de 2020) para vacante de <strong>Magistrado en la Sala de Casación Penal de la Corte Suprema</strong>.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-700/80 text-xs text-slate-400 italic">
+              "Uno de los mejores jueces de Colombia conforme a su intachable trayectoria y vocación de servicio a la justicia."
+            </div>
+          </div>
+
+          <!-- Contenido Explicativo -->
+          <div class="lg:col-span-8 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-red-700 uppercase tracking-widest mb-2">
+                <i class="fas fa-handshake"></i> La Figura de la Coadyuvancia Ciudadana
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+                ¿Por qué los ciudadanos nos unimos como Coadyuvantes?
+              </h3>
+              <div class="prose text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                <p>
+                  El <strong>Artículo 13 del Decreto 2591 de 1991</strong> otorga a cualquier persona con interés legítimo en un asunto de tutela el derecho a actuar como coadyuvante del accionante, respaldando sus argumentos de hecho y de derecho.
+                </p>
+                <p>
+                  Las vulneraciones a los derechos fundamentales y las amenazas denunciadas por el <strong>Doctor Gabriel Jorge Triana Perdomo</strong> no son individuales: representan un agravio colectivo que pone en riesgo inminente a la ciudadanía entera, la vigencia del orden constitucional, la laicidad del Estado, el debido proceso electoral y la soberanía del país.
+                </p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-amber-900 text-sm">
+                  <p class="font-semibold">
+                    <i class="fas fa-quote-left mr-1 text-amber-600"></i>
+                    "Acudimos ante la Honorable Corte Suprema de Justicia para manifestar nuestro APOYO INCONDICIONAL Y RESPALDO TOTAL a la impugnación... por cuanto las violaciones a los derechos fundamentales nos afectan también a nosotros, a nuestras familias y a toda la ciudadanía colombiana."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center gap-4 pt-6 border-t border-slate-100">
+              <a href="#firmar" class="bg-slate-900 hover:bg-slate-800 text-amber-400 hover:text-amber-300 px-6 py-3 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                <i class="fas fa-pen-fancy"></i> Adherir mi Nombre y Cédula
+              </a>
+              <a href="#motivos" class="text-slate-600 hover:text-slate-900 font-semibold text-sm flex items-center gap-1">
+                Conocer los 6 Motivos Jurídicos <i class="fas fa-arrow-down text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPOSICIÓN DE MOTIVOS: LOS 6 EJES JURÍDICOS -->
+  <section id="motivos" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Sección -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold text-red-700 tracking-widest uppercase bg-red-50 border border-red-200 px-3 py-1 rounded-full">
+          FUNDAMENTOS DE DERECHO Y HECHO
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display-title mt-3 mb-4">
+          I. Exposición de Motivos del Memorial
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          Detalle de las violaciones flagrantes a la Constitución Política de 1991, los tratados internacionales y los derechos fundamentales invocados en el recurso de impugnación.
+        </p>
+        <div class="mt-4">
+          <button id="toggle-all-motivos" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-3.5 py-1.5 rounded-lg transition inline-flex items-center">
+            <i class="fas fa-expand-alt mr-2"></i> Desplegar todos los motivos
+          </button>
+        </div>
+      </div>
+
+      <!-- Lista de Acordeones -->
+      <div class="space-y-4">
+
+        <!-- MOTIVO 1 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden active">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-100 text-red-700 font-bold flex items-center justify-center text-sm sm:text-base border border-red-200">
+                1
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  La Vulneración es Colectiva y Nacional
+                </h3>
+                <span class="text-xs text-red-600 font-medium">Derecho a la vida, igualdad, debido proceso, libertad de prensa y verdad</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white">
+            <p class="mb-3">
+              Las violaciones a la Constitución Política y a los derechos fundamentales invocados en la tutela —como lo son el <strong>derecho a la vida, a la igualdad, a la libertad de expresión y de prensa, al debido proceso, a la libertad política, al acceso a la justicia y a conocer la verdad</strong>— no son exclusivas del accionante.
+            </p>
+            <p>
+              Constituyen agravios colectivos que nos afectan a todos los colombianos, de manera especial a quienes integramos las fuerzas políticas alternativas, la oposición democrática y los sectores populares, víctimas históricas de persecución y exterminio en nuestro país.
+            </p>
+          </div>
+        </div>
+
+        <!-- MOTIVO 2 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-100 text-red-700 font-bold flex items-center justify-center text-sm sm:text-base border border-red-200">
+                2
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  Desde la Candidatura: Amenazas y Discurso de Deshumanización
+                </h3>
+                <span class="text-xs text-red-600 font-medium">Estigmatización a más de 13 millones de votantes y apología a genocidas</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white space-y-3">
+            <p>
+              Antes de su elección, el señor <strong>Abelardo de la Espriella Otero</strong> profirió expresiones públicas de extrema gravedad: amenazas de <em>"destripar a la izquierda"</em>, calificación de la oposición como <em>"plaga a erradicar"</em>, <em>"aparato criminal"</em>, <em>"banda mafiosa"</em> y <em>"delincuentes y guerrilleros"</em>, dirigidas a los más de <strong>13 millones de ciudadanos colombianos</strong> que votamos por la fórmula opositora en la segunda vuelta.
+            </p>
+            <p>
+              Este discurso de deshumanización repite los patrones históricos que condujeron al exterminio de la Unión Patriótica (con más de 5.729 víctimas) y constituye una amenaza real, concreta e inminente contra la vida y la integridad de millones de colombianos, máxime cuando quien lo profiere ostenta la Jefatura de Estado y el mando supremo de la fuerza pública.
+            </p>
+            <div class="p-3.5 bg-red-50 rounded-lg border border-red-200 text-red-900 text-xs sm:text-sm">
+              <strong class="text-red-700 block mb-1">Apología al genocidio:</strong>
+              El señor de la Espriella manifestó públicamente en medios de comunicación ser admirador de Salvatore Mancuso (exjefe paramilitar) y del Primer Ministro de Israel Benjamín Netanyahu (quien tiene orden vigente de arresto expedida por la Corte Penal Internacional por crímenes de lesa humanidad y genocidio en la Franja de Gaza). Afirmó públicamente que <em>“eso es exactamente lo mismo que va a hacer él para defender a Colombia”</em>, lo cual constituye una grave apología al genocidio.
+            </div>
+          </div>
+        </div>
+
+        <!-- MOTIVO 3 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-sm sm:text-base border border-amber-200">
+                3
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  Como Candidato y Electo: Irregularidades que Afectan la Legitimidad del Poder
+                </h3>
+                <span class="text-xs text-amber-700 font-medium">Doble nacionalidad, +3M firmas inválidas e inactividad de la Fiscalía</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white space-y-3">
+            <div class="border-l-2 border-slate-400 pl-3">
+              <h4 class="font-bold text-slate-900">a) Doble nacionalidad y conflicto de lealtades</h4>
+              <p>El juramento de lealtad prestado ante los Estados Unidos de América es incompatible con la lealtad exclusiva que exige la Presidencia de la República (Arts. 40 num. 7 y 179 num. 7 C.P.). Al posesionarse, con dicho juramento, pudo haber incurrido en el delito de traición a la patria.</p>
+            </div>
+            <div class="border-l-2 border-slate-400 pl-3">
+              <h4 class="font-bold text-slate-900">b) Irregularidades masivas en firmas de apoyo</h4>
+              <p>Más de 3 millones de firmas invalidadas, presuntamente falsas, de aproximadamente 5 millones presentadas, constituyen una irregularidad de tal magnitud que vulnera el derecho fundamental a elegir y ser elegido con transparencia.</p>
+            </div>
+            <div class="border-l-2 border-slate-400 pl-3">
+              <h4 class="font-bold text-slate-900">c) Omisión de la Fiscalía General de la Nación</h4>
+              <p>Inactividad en investigar delitos como el caso "Torres Gemelas", con gravísimas irregularidades procesales, que lleva más de 14 años sin avance efectivo y a menos de 4 de prescribir. Asimismo, los presuntos delitos publicados el 1 de junio de 2026 en <em>La Nueva Prensa</em> por Gonzalo Guillén: <em>"El expediente oculto de Abelardo de la Espriella y las redes subterráneas que el país desconoce"</em> (<a href="https://www.lanuevaprensa.com.co" target="_blank" rel="noopener" class="text-blue-600 underline">lanuevaprensa.com.co</a>). Su impunidad vulnera los artículos 229 y 250 de la Constitución.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOTIVO 4 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-sm sm:text-base border border-amber-200">
+                4
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  El Acto de Posesión: Desprecio por las Instituciones y Gasto Público Ilegítimo
+                </h3>
+                <span class="text-xs text-amber-700 font-medium">Gasto de $14.000 millones, quiebre del Estado laico y desacato judicial</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white space-y-3">
+            <p><strong>a) Desconocimiento del Congreso:</strong> El legislativo aprobó el acto en Cali, pero no en instalaciones militares; sin embargo, se trasladó a una guarnición militar con un costo cercano a $14.000 millones sin autorización.</p>
+            <p><strong>b) Violación al Estado Laico y Libertad de Cultos (Art. 19 C.P.):</strong> Imposición de ceremonial religioso en el juramento. Pese a que el Juzgado 5° Laboral de Bogotá le ordenó pedir disculpas en alocución pública el 30 de agosto de 2026, incurrió en desacato terminando su discurso al grito de <em>"Que viva Cristo Rey"</em>, conducta reiterada el 28 de agosto en la Plaza de Bolívar.</p>
+            <p><strong>c) Irrespeto a las instituciones:</strong> Desprecio al Congreso, Vicepresidencia, cuerpo diplomático y mandatarios internacionales, abandonando el recinto sin saludo ni protocolo.</p>
+          </div>
+        </div>
+
+        <!-- MOTIVO 5 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-100 text-red-700 font-bold flex items-center justify-center text-sm sm:text-base border border-red-200">
+                5
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  En Ejercicio de la Presidencia: En Tan Solo 21 Días de Violaciones Graves
+                </h3>
+                <span class="text-xs text-red-600 font-medium">Soberanía, tropas extranjeras, recorte al SENA, ataque a la JEP y nepotismo</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white space-y-4">
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-900 text-sm mb-1 text-red-700 flex items-center gap-1.5">
+                <i class="fas fa-shield"></i> A. Soberanía, Derechos Humanos y Orden Internacional
+              </h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 text-slate-600">
+                <li><strong>Negativa a ayuda internacional en el terremoto:</strong> Rechazó ayuda humanitaria de México y China el 10 de agosto de 2026 por motivos ideológicos con personas atrapadas bajo escombros (Art. 11 C.P.).</li>
+                <li><strong>Tropas extranjeras sin aval del Senado:</strong> Despliegue de tropas de EE.UU. e Israel en territorio colombiano violando el Art. 173 num. 4 C.P.</li>
+                <li><strong>Retiro de la CPI y del Estatuto de Roma:</strong> Intento de debilitar la justicia internacional contra crímenes de lesa humanidad ante presiones del secretario de defensa de EE.UU. Pete Hegseth en la alianza A3C.</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-900 text-sm mb-1 text-amber-700 flex items-center gap-1.5">
+                <i class="fas fa-chart-line-down"></i> B. Política Económica Regresiva, Derechos Sociales y Paz
+              </h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 text-slate-600">
+                <li><strong>Presupuesto 2027:</strong> Gasto de $635 billones con 9.000 puestos burocráticos y recorte de <strong>$719.000 millones al SENA</strong> y a la educación pública.</li>
+                <li><strong>Eliminación del impuesto al patrimonio:</strong> Beneficio a grandes fortunas que compromete las finanzas del Estado y vulnera la equidad tributaria (Art. 363 C.P.).</li>
+                <li><strong>Desmonte de la JEP:</strong> Desconocimiento del deber estatal de garantizar verdad, justicia y reparación a las víctimas (Art. 22 C.P.).</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-900 text-sm mb-1 text-blue-800 flex items-center gap-1.5">
+                <i class="fas fa-users-gear"></i> C. Nepotismo, Opacidad y Ruptura Institucional
+              </h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 text-slate-600">
+                <li>Nombramiento de su exesposa Yoly Beatriz Illidge en SNR, su primo Rodolfo Londoño en universidades públicas y su exdefensor Iván Cancino como Ministro de Justicia (abogado en caso David Murcia Guzmán / DMG con sospechoso traslado carcelario a Palo Gordo).</li>
+                <li>Deportaciones exprés masivas desconociendo el debido proceso y convenios de asilo.</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-900 text-sm mb-1 text-slate-800 flex items-center gap-1.5">
+                <i class="fas fa-radio"></i> D. Violaciones a DDHH y Libertad de Expresión
+              </h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 text-slate-600">
+                <li>Proselitismo con el dolor del terremoto arrojando balones con logo de campaña; exhibición triunfalista entre cadáveres en Operación Azarías (Guaviare) incluyendo menores de edad.</li>
+                <li>Bombardeos a población campesina en Catatumbo (Vereda Sinaí, San Calixto).</li>
+                <li>Censura en RTVC y cierre de 20 emisoras de paz; reconocimiento de los Altos del Golán a Israel sin aval institucional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOTIVO 6 -->
+        <div class="accordion-item bg-slate-50 rounded-xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition focus:outline-none">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <span class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-100 text-red-700 font-bold flex items-center justify-center text-sm sm:text-base border border-red-200">
+                6
+              </span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                  El Perjuicio Irremediable ya se Consumó y se Prolongará
+                </h3>
+                <span class="text-xs text-red-600 font-medium">Urgencia cautelar frente a los tiempos del Consejo de Estado</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down accordion-icon text-slate-400 text-sm ml-4"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6 pt-2 text-slate-700 text-sm leading-relaxed border-t border-slate-200/60 bg-white space-y-3">
+            <p>
+              El Consejo de Estado puede tardar hasta un (1) año en resolver la demanda de nulidad electoral (Parágrafo del Art. 264 C.P.). Durante este prolongado lapso, el daño al orden constitucional, al erario (como el derroche permanente en desplazamientos en helicóptero) y a los derechos ciudadanos se hace irreversible.
+            </p>
+            <p>
+              La acción de tutela es el <strong>único mecanismo judicial capaz de proteger a la ciudadanía ante un perjuicio irremediable</strong>, agravado por inconsistencias manifiestas en declaraciones de renta ante la DIAN (corregidas en agosto de 2026 tras escándalo público) y reportes fraudulentos en el Registro Universal de Ingresos (RUI) como grupo vulnerable CO3 en riesgo de pobreza pese a su condición de multimillonario.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PETICIONES CONCRETAS ANTE LA CORTE SUPREMA -->
+  <section id="peticiones" class="py-16 bg-slate-900 text-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fas fa-scroll"></i> Sala de Casación Civil • Corte Suprema de Justicia
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display-title">
+          II. Petición Concreta Ciudadana
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Con fundamento en el acervo fáctico y probatorio, solicitamos formalmente a los Honorables Magistrados:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Petición 1 -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 hover:border-amber-500/50 transition flex items-start gap-4">
+          <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0 text-sm">
+            1
+          </span>
+          <div>
+            <h3 class="font-bold text-white text-base mb-1">Admitir el Memorial y Firmas</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Admitir y recibir el presente memorial de coadyuvancia, junto con el listado de firmas adheridas, como expresión de la voluntad colectiva ciudadana.
+            </p>
+          </div>
+        </div>
+
+        <!-- Petición 2 -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 hover:border-amber-500/50 transition flex items-start gap-4">
+          <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0 text-sm">
+            2
+          </span>
+          <div>
+            <h3 class="font-bold text-white text-base mb-1">Acoger la Impugnación</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Acoger íntegramente los argumentos de la impugnación formulada por el ciudadano y exjuez penal Dr. Gabriel Jorge Triana Perdomo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Petición 3 -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 hover:border-amber-500/50 transition flex items-start gap-4">
+          <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0 text-sm">
+            3
+          </span>
+          <div>
+            <h3 class="font-bold text-white text-base mb-1">Revocar Fallo de 1ª Instancia</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Revocar la sentencia proferida por la Sala Quinta Civil del Tribunal Superior del Distrito Judicial de Bogotá que denegó el amparo constitucional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Petición 4 (Clave) -->
+        <div class="bg-gradient-to-br from-red-950/70 to-slate-800 border-2 border-red-600/70 rounded-xl p-5 shadow-lg flex items-start gap-4 md:col-span-2">
+          <span class="w-9 h-9 rounded-full bg-red-600 text-white font-extrabold flex items-center justify-center shrink-0 text-base shadow">
+            4
+          </span>
+          <div>
+            <div class="inline-block px-2 py-0.5 rounded bg-red-600 text-white text-[10px] font-bold uppercase mb-1">
+              MEDIDA CAUTELAR URGENTE
+            </div>
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              Suspensión Provisional del Ejercicio Presidencial
+            </h3>
+            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+              Conceder el amparo de los derechos fundamentales y <strong>ORDENAR LA SUSPENSIÓN PROVISIONAL</strong> de los actos de declaratoria de elección y el ejercicio del cargo de Presidente de la República al señor Abelardo Gabriel de la Espriella Otero, mientras se resuelve la nulidad electoral en el Consejo de Estado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Petición 5 -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 hover:border-amber-500/50 transition flex items-start gap-4">
+          <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0 text-sm">
+            5
+          </span>
+          <div>
+            <h3 class="font-bold text-white text-base mb-1">Órdenes a la Fiscalía General</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Ordenar la reanudación urgente de investigaciones penales pendientes (caso "Torres Gemelas" y reportajes de <em>La Nueva Prensa</em>) en cumplimiento de los artículos 229 y 250 constitucionales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Petición 6 -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 hover:border-amber-500/50 transition flex items-start gap-4">
+          <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0 text-sm">
+            6
+          </span>
+          <div>
+            <h3 class="font-bold text-white text-base mb-1">Informe del CNE y Registraduría</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Ordenar al CNE y a la Registraduría rendir informe técnico exhaustivo sobre la doble nacionalidad y las más de 3 millones de firmas de apoyo invalidadas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Declaración de Compromiso -->
+      <div class="mt-10 bg-slate-950/70 border border-amber-500/30 rounded-xl p-6 text-center text-slate-300 text-xs sm:text-sm max-w-3xl mx-auto">
+        <span class="text-amber-400 font-bold uppercase tracking-wider block mb-1">
+          <i class="fas fa-hand-holding-heart mr-1"></i> Compromiso Cívico Solemne
+        </span>
+        "La soberanía reside en el pueblo, y es el pueblo quien debe velar por el cumplimiento de la Constitución Nacional, la ley, el ejercicio de la justicia y la defensa irrestricta de los derechos humanos y el Estado Social de Derecho."
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE FIRMA Y COADYUVANCIA (CALL TO ACTION CENTRAL) -->
+  <section id="firmar" class="py-20 bg-subtle-mesh relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl shadow-2xl border border-slate-300/80 overflow-hidden">
+        
+        <!-- Cabecera de la Tarjeta de Firma -->
+        <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 text-white p-8 sm:p-10 text-center relative">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold uppercase mb-3">
+            <i class="fas fa-check-circle"></i> Participación Ciudadana Abierta
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold font-display-title text-white leading-tight">
+            Firma el Formulario Oficial de Coadyuvancia
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mt-3">
+            Al registrar tus datos en el formulario oficial, tu nombre y cédula se integrarán formalmente al listado anexo de ciudadanos coadyuvantes que se radicará ante la Honorable Corte Suprema de Justicia.
+          </p>
+        </div>
+
+        <!-- Contenido de Acción -->
+        <div class="p-8 sm:p-10 text-center space-y-8">
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 max-w-2xl mx-auto text-left text-xs sm:text-sm space-y-2 text-slate-600">
+            <h4 class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+              <i class="fas fa-info-circle text-amber-500"></i> Información requerida en el formulario:
+            </h4>
+            <p>• Nombres y Apellidos completos de la ciudadanía firmante.</p>
+            <p>• Número de Cédula de Ciudadanía (requisito de ley procesal para coadyuvancia).</p>
+            <p>• Ciudad / Municipio de residencia en Colombia o en el exterior.</p>
+            <p>• Correo electrónico de contacto o notificación de novedades judiciales.</p>
+          </div>
+
+          <!-- Opciones de acceso al formulario y Código QR -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center max-w-2xl mx-auto bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <!-- Botón de apertura -->
+            <div class="md:col-span-8 space-y-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">
+                <i class="fas fa-shield-check"></i> Formulario Seguro en Google
+              </span>
+              <h4 class="font-bold text-slate-900 text-base">
+                Diligencia el formulario digital oficial
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Tus datos quedarán asentados en la planilla formal de coadyuvancia ciudadana para ser radicada como anexo de segunda instancia.
+              </p>
+              <div class="pt-1 flex flex-col sm:flex-row gap-3">
+                <a href="https://forms.gle/UrTeZuqjvCvnhndD7" target="_blank" rel="noopener noreferrer" class="glowing-btn inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-lg transition">
+                  <i class="fas fa-pen-nib text-amber-300"></i>
+                  <span>Firmar en Google Forms</span>
+                  <i class="fas fa-arrow-up-right-from-square text-xs opacity-75"></i>
+                </a>
+                <button onclick="openModal('form-embed-modal')" class="bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-xs px-4 py-3.5 rounded-xl transition inline-flex items-center justify-center gap-2 shadow-sm">
+                  <i class="fas fa-window-maximize text-amber-600"></i>
+                  <span>Ver aquí</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Código QR para Móvil -->
+            <div class="md:col-span-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-sm text-center">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&margin=0&data=https%3A%2F%2Fforms.gle%2FUrTeZuqjvCvnhndD7" alt="Código QR para abrir Google Forms en el celular" class="w-28 h-28 object-contain rounded" loading="lazy">
+              <span class="text-[11px] font-bold text-slate-700 mt-2 flex items-center gap-1">
+                <i class="fas fa-qrcode text-amber-600"></i> Escanea con tu celular
+              </span>
+              <span class="text-[10px] text-slate-400">Para firmar desde móvil</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE DIFUSIÓN CIUDADANA Y VIRALIDAD -->
+  <section id="difusion" class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="inline-block px-3 py-1 rounded-full bg-red-600/30 border border-red-500/50 text-red-300 text-xs font-bold uppercase mb-3">
+        Multiplica la Convocatoria
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-display-title mb-4">
+        ¡Cada Firma Cuenta! Comparte esta Iniciativa
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+        Ayuda a visibilizar este proceso constitucional enviando la convocatoria a tus familiares, grupos de WhatsApp, colectivos y redes sociales.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <!-- WhatsApp -->
+        <button onclick="shareOnWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-xl font-bold text-sm shadow-md transition flex flex-col items-center justify-center gap-2">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span>WhatsApp</span>
+        </button>
+
+        <!-- X (Twitter) -->
+        <button onclick="shareOnTwitter()" class="bg-black hover:bg-slate-800 text-white p-4 rounded-xl font-bold text-sm border border-slate-700 shadow-md transition flex flex-col items-center justify-center gap-2">
+          <i class="fab fa-x-twitter text-2xl"></i>
+          <span>X / Twitter</span>
+        </button>
+
+        <!-- Telegram -->
+        <button onclick="shareOnTelegram()" class="bg-sky-600 hover:bg-sky-500 text-white p-4 rounded-xl font-bold text-sm shadow-md transition flex flex-col items-center justify-center gap-2">
+          <i class="fab fa-telegram text-2xl"></i>
+          <span>Telegram</span>
+        </button>
+
+        <!-- Copiar Enlace -->
+        <button onclick="copyFormLink()" class="bg-amber-600 hover:bg-amber-500 text-white p-4 rounded-xl font-bold text-sm shadow-md transition flex flex-col items-center justify-center gap-2">
+          <i class="fas fa-copy text-2xl"></i>
+          <span>Copiar Formulario</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISOR Y LECTOR DEL MEMORIAL OFICIAL COMPLETO -->
+  <section id="memorial-reader" class="py-20 bg-slate-100 border-t border-slate-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-amber-700 uppercase tracking-wider">Documento Jurídico Radicado</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-display-title text-slate-900">
+            Texto Íntegro del Memorial
+          </h2>
+          <p class="text-xs text-slate-500">Bogotá D.C., 1 de septiembre de 2026 • Radicado N° 11001-2203-000-2026-03364-00</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="printMemorial()" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg shadow flex items-center gap-2">
+            <i class="fas fa-print"></i> Imprimir / PDF
+          </button>
+          <button onclick="copyMemorialText()" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs font-bold px-4 py-2.5 rounded-lg shadow-sm flex items-center gap-2">
+            <i class="fas fa-copy"></i> Copiar Texto
+          </button>
+        </div>
+      </div>
+
+      <!-- Papel Jurídico Estilizado -->
+      <div class="legal-paper rounded-2xl p-6 sm:p-12 font-serif-legal text-slate-900 leading-relaxed text-sm sm:text-base border border-slate-200">
+        
+        <!-- Cabecera de Documento con Imagen Facsimilar -->
+        <div class="border-b-2 border-slate-900 pb-6 mb-8 text-center sm:text-left">
+          <div class="flex justify-center mb-6">
+            <img src="documento_cabecera.png" alt="Cabecera oficial del Memorial de Tutela" class="max-h-48 w-auto rounded shadow-sm border border-slate-300">
+          </div>
+          <p class="font-bold text-xs uppercase text-slate-500 text-center tracking-widest mb-1">
+            República de Colombia • Rama Judicial del Poder Público
+          </p>
+          <h3 class="font-extrabold text-sm sm:text-base text-center leading-snug">
+            MEMORIAL CIUDADANO DEL PUEBLO COLOMBIANO, EN RESPALDO COMO COADYUVANTES DE LA IMPUGNACIÓN, FORMULADA POR EL ACCIONANTE, DOCTOR GABRIEL JORGE TRIANA PERDOMO, CONTRA EL FALLO DE PRIMERA INSTANCIA, DE FECHA 19 DE AGOSTO DE 2026, DE LA SALA QUINTA DE DECISIÓN CIVIL DEL TRIBUNAL SUPERIOR DEL DISTRITO JUDICIAL DE BOGOTÁ, DENTRO DE LA ACCION DE TUTELA RAD. 11001-2203-000-2026-03364-00, SIENDO ACCIONADOS, EL CONSEJO NACIONAL ELECTORAL, REGISTRADURÍA NACIONAL DEL ESTADO CIVIL, FISCALÍA GENERAL DE LA NACIÓN, Y VINCULADO ABELARDO GABRIEL DE LA ESPRIELLA OTERO, ACTUAL PRESIDENTE DE LA REPUBLICA DE COLOMBIA Y OTROS.
+          </h3>
+        </div>
+
+        <div class="space-y-6 text-justify text-slate-800" id="memorial-content-text">
+          <p>
+            <strong>Bogotá D.C. 1 de septiembre 2026</strong><br>
+            Señores Magistrados<br>
+            <strong>SALA DE CASACIÓN CIVIL<br>
+            HONORABLE CORTE SUPREMA DE JUSTICIA</strong><br>
+            E. S. D.<br>
+            Referencia: <strong>Radicado N° 11001-2203-000-2026-03364-00</strong><br>
+            <strong>ACCIÓN DE TUTELA</strong>
+          </p>
+
+          <p><strong>Cordial saludo</strong></p>
+
+          <p>
+            Los abajo firmantes, ciudadanos colombianos mayores de edad, en ejercicio de nuestros derechos políticos y constitucionales, identificados con las cédulas de ciudadanía que se relacionan en el listado anexo. Comparecemos ante esa Honorable corporación de justicia, en el trámite de segunda instancia de la acción de tutela de la referencia, para manifestar nuestro <strong>APOYO INCONDICIONAL Y NUESTRO RESPALDO TOTAL</strong> a la impugnación presentada por el ciudadano, doctor <strong>GABRIEL JORGE TRIANA PERDOMO</strong>, ilustre jurista, exjuez de la República por 41 años, principalmente en el área penal, con una hoja de vida limpia, sin ningún tipo de sanción por el ejercicio de sus funciones; considerado uno de los mejores Jueces de Colombia, conforme a su trayectoria y la calificación de <strong>EXCELENCIA</strong> por sus servicios, para el año 2023 de 97 puntos sobre 100, y exintegrante de la lista de preseleccionados por parte de la Presidencia del Consejo Superior de la Judicatura, publicada el 22 de julio del año 2020, para ocupar una vacante de Magistrado en la Sala de Casación Penal de esa Honorable Corte Suprema de Justicia. Acudimos ante ustedes, en nuestra condición de <strong>COADYUVANTES DEL ACCIONANTE</strong>, de conformidad al artículo 13 del Decreto 2591 de 1991, para respaldar íntegramente los argumentos de hecho y de derecho expuestos en su escrito de impugnación al fallo de tutela de primera instancia, por cuanto las vulneraciones a los derechos fundamentales y las amenazas a que se refiere el accionante, nos afectan también a nosotros, a nuestras familias y a toda la ciudadanía colombiana.
+          </p>
+
+          <h4 class="font-bold text-slate-950 uppercase border-b border-slate-300 pb-1 mt-6">
+            I. EXPOSICIÓN DE MOTIVOS
+          </h4>
+
+          <p>
+            <strong>1. LA VULNERACIÓN ES COLECTIVA Y NACIONAL:</strong><br>
+            Las violaciones a la Constitución Política y a los derechos fundamentales invocados en la tutela, como lo son el derecho a la vida, a la igualdad, a la libertad de expresión y de prensa, al debido proceso, a la libertad política, al acceso a la justicia y a conocer la verdad, no son exclusivas del accionante. Constituyen agravios colectivos que nos afectan a todos los colombianos, de manera especial a quienes integramos las fuerzas políticas de izquierda, la oposición democrática y los sectores populares, víctimas históricas de persecución y exterminio en nuestro país.
+          </p>
+
+          <p>
+            <strong>2. DESDE LA CANDIDATURA: AMENAZAS Y DISCURSO DE DESHUMANIZACIÓN:</strong><br>
+            Antes de su elección, el señor Abelardo de la Espriella Otero profirió expresiones públicas de extrema gravedad: amenazas de "destripar a la izquierda", calificación de la oposición como "plaga a erradicar", "aparato criminal", "banda mafiosa" y "delincuentes y guerrilleros", dirigidas a los más de 13 millones de ciudadanos colombianos que votamos por Iván Cepeda Castro, la otra fórmula presidencial en la segunda vuelta. Este discurso de deshumanización repite patrones históricos que condujeron al exterminio de la Unión Patriótica, con más de 5.729 víctimas, y constituye amenaza real, concreta e inminente contra la vida y la integridad de millones de colombianos, especialmente, porque quien lo pronuncia, detenta la Jefatura del Estado y el mando de la fuerza pública, y quien antes de ser elegido presidente, manifestó públicamente en los medios, ser admirador de dos genocidas, como lo fue Salvatore Mancuso, jefe ex paramilitar que contribuyó al genocidio de muchos colombianos, y del genocida Primer Ministro de Israel, Benjamín Netanyahu, el que tiene orden vigente de arresto, expedida por la Corte Penal Internacional, por crímenes de guerra y crímenes de lesa humanidad, que ha causado un genocidio en la franja de Gaza, como la muerte de más de 20 mil niños. El señor de la Espriella en torno al proceder de ese genocida, ha afirmado que “eso es exactamente lo mismo que va a hacer él, para defender a Colombia”, lo cual es muy grave, pues se trata de hacerle apología al genocidio, por lo que se infiere, puede cumplir sus amenazas, de destripar a gran parte del pueblo colombiano.
+          </p>
+
+          <p>
+            <strong>3. COMO CANDIDATO Y PRESIDENTE ELECTO: IRREGULARIDADES QUE AFECTAN LA LEGITIMIDAD DEL PODER:</strong><br>
+            <em>a) Doble nacionalidad y conflicto de lealtades:</em> El juramento de lealtad prestado ante los Estados Unidos de América es incompatible con la lealtad exclusiva que exige la Presidencia de la República, conforme al artículo 40 numeral 7° y 179 numeral 7° de la Constitución Política, y al tomar posesión de la presidencia, con su juramento, pudo haber incurrido en el delito de traición a la patria.<br>
+            <em>b) Irregularidades masivas en las firmas de apoyo:</em> Más de 3 millones de firmas invalidadas, presuntamente falsas, de aproximadamente 5 millones presentadas, constituyen una irregularidad de tal magnitud que vulnera el derecho fundamental a elegir y ser elegido con transparencia.<br>
+            <em>c) Inactividad u omisión de la Fiscalía General de la Nación:</em> en investigar los graves delitos en los que está involucrado el señor de la Espriella, como el caso denominado "Torres Gemelas", con presuntas gravísimas irregularidades procesales, lleva más de 14 años sin avance efectivo, estando a menos de 4 años de prescribir. Así mismo el conjunto de presuntos graves delitos, con elementos materiales probatorios de juicio, en los que aparece vinculado el ahora Presidente de la Espriella Otero, publicados el día primero (1) de junio de 2026, en el medio de comunicación “La Nueva Prensa”, dirigido por el gran periodista Gonzalo Guillén, sobre un reportaje con un dosier, bajo el título “El expediente oculto de Abelardo de la Espriella y las redes subterráneas que el país desconoce”, al que se puede acceder mediante el link: wwwlanuevaprensa.com.co La omisión de investigar esos graves delitos en los que está involucrado nada más ni nada menos que el hoy Presidente de los colombianos, no pude quedar en la más absoluta impunidad por parte de la fiscalía y la justicia, presuntos delitos que al parecer fueron cometidos mucho antes de ser presidente, por lo que la fiscalía tiene la competencia para ello, omisión que vulnera el derecho de todos los colombianos a la verdad y el acceso la administración de justicia pronta y cumplida, que establecen los artículos 229 y 250 de la Carta Política.
+          </p>
+
+          <p>
+            <strong>4. EL ACTO DE POSESIÓN: DESPRECIO POR LAS INSTITUCIONES Y EL GASTO PÚBLICO ILEGÍTIMO:</strong><br>
+            <em>a) Se desconoció la voluntad del Congreso de la República:</em> que aprobó la realización del acto en Cali, pero no en instalaciones militares, y sin embargo se trasladó a una guarnición militar, con un gasto cercano a los 14.000 millones de pesos de recursos públicos, sin autorización legislativa.<br>
+            <em>b) Se vulneró el carácter laico por libertad de cultos del Estado:</em> mediante un ceremonial religioso impuesto en el acto de juramento, contraviniendo el artículo 19 de la Constitución Política, sobre lo cual en un proceso de tutela, el Juzgado Quinto Laboral del Circuito de Bogotá, le ordenó al señor de la Espriella, ofrecer disculpas públicas al país, mediante una alocución en radio y televisión programada para el 30 de agosto de 2026 a las 7:p.m., en la que luego de ofrecer excusas, incurrió en la misma violación, al terminar su alocución gritando “Que viva Cristo Rey”, conducta que volvió a repetir, en el acto público religioso celebrado el pasado día viernes 28 de agosto de 2026, en la Plaza de Bolivar, en abierto desacato a la Constitución Nacional y burla a la justicia.<br>
+            <em>c) Irrespetó a los asistentes al acto de posesión:</em> Al Congreso, a la Vicepresidencia, al cuerpo diplomático y a los jefes de Estado invitados, abandonando el recinto sin saludo ni protocolo, en manifestación de desprecio por los demás poderes públicos.
+          </p>
+
+          <p>
+            <strong>5. EN EJERCICIO DE LA PRESIDENCIA: EN TAN SOLO 21 DÍAS, VIOLACIONES GRAVES Y CONTINUAS A LA CONSTITUCIÓN NACIONAL:</strong><br>
+            En menos de un mes desde su posesión, el señor de la Espriella ha cometido actuaciones que por sí solas justifican la suspensión de sus funciones:
+          </p>
+
+          <div class="pl-4 border-l-2 border-slate-300 space-y-3">
+            <p>
+              <strong>A. Vulneración a la soberanía, derechos humanos y el orden internacional:</strong><br>
+              <em>Negativa a recibir ayuda internacional durante el terremoto:</em> Ante la catástrofe del 10 de agosto de 2026, con miles de víctimas y personas atrapadas bajo escombros, se negó a recibir ayuda de países con capacidad probada de rescate como México y China, por razones ideológicas, poniendo en riesgo el derecho fundamental de la vida de los colombianos, vulnerando el artículo 11 de la Constitución.<br>
+              <em>Ingreso de tropas extranjeras sin autorización del Congreso:</em> Determinó el ingreso y despliegue de fuerzas militares de los Estados Unidos e Israel en territorio nacional, sin la autorización previa del Congreso de la República, tal como lo exige de manera imperativa el artículo 173, numeral 4° de la Constitución Política. Es la violación más grave a la soberanía nacional en décadas.<br>
+              <em>Retiro de la Corte Penal Internacional y el Estatuto de Roma:</em> Anunció su intención de retirar a Colombia como Estado parte del Estatuto de Roma y de la Corte Penal Internacional, debilitando el marco de protección de los derechos humanos y el derecho internacional, y poniendo en riesgo la persecución de crímenes de lesa humanidad cometidos en el marco del conflicto armado, en abierta contradicción con los compromisos internacionales y los principios constitucionales de justicia, verdad y reparación, muy seguramente cumpliendo la presión y advertencia del secretario de Defensa de EE.UU., Pete Hegseth, a los 19 países miembros de la Coalición de las Américas contra los carteles (A3C), bloque del que hace parte Colombia.
+            </p>
+
+            <p>
+              <strong>B. Política económica regresiva, afectación a derechos sociales y al proceso de paz:</strong><br>
+              <em>Presupuesto 2027: Aumento del gasto, recorte a educación y privatización:</em> Presentó el Presupuesto General de la Nación para 2027 por 635 billones de pesos 60 billones más que el año anterior, creando 9.000 nuevos puestos burocráticos, pero recortando el presupuesto para la educación y promoviendo su privatización, además de imponer un recorte de $719.000 millones de pesos al SENA, afectando el derecho fundamental a la educación, la formación técnica y el acceso al trabajo digno, especialmente para los jóvenes y sectores populares.<br>
+              <em>Eliminación del impuesto al patrimonio: Endeudamiento del Estado y desigualdad:</em> Anunció la eliminación del impuesto al patrimonio, medida que favorece exclusivamente a los sectores más acaudalados del país, dejando al Estado totalmente endeudado y comprometiendo el futuro fiscal de la Nación, lo que inevitablemente se traducirá en nuevos impuestos sobre los sectores medios y populares, vulnerando el principio de equidad tributaria consagrado en el artículo 363 de la Constitución.<br>
+              <em>Ataque a la JEP y al proceso de paz:</em> Declaró su intención de eliminar la Jurisdicción Especial para la Paz y todo lo relacionado con el Acuerdo Final de Paz, desconociendo el deber del Estado de garantizar la justicia, la verdad y la reparación a las víctimas del conflicto armado, así como el cumplimiento de los tratados internacionales y los actos legislativos que crearon la JEP. Esto constituye una vulneración grave al derecho de las víctimas y a la paz estable y duradera consagrada en el artículo 22 de la Constitución.
+            </p>
+
+            <p>
+              <strong>C. Nepotismo, opacidad y ruptura institucional:</strong><br>
+              <em>Nepotismo en nombramientos de altos cargos:</em> En sus primeros días de gestión, firmó múltiples decretos de designación en entidades públicas y juntas directivas, entre ellos el nombramiento de su exesposa Yoly Beatriz Illidge, como superintendente delegada de la Superintendencia de Notariado y Registro, y a su primo Rodolfo Londoño de la Espriella, como representante del Presidente, ante los consejos superiores de universidades públicas. Nombró como Ministro de Justicia a Iván Cansino, su ex abogado defensor en el proceso disciplinario, que se le adelantó por la grave denuncia de David Murcia Guzmán, de haberle robado 5 mil millones de pesos, cuando hace 18 años fue su apoderado, sobre una defensa que no le hizo, porque solo estuvo 3 meses en esa función, y quien hace unos días fue extrañamente trasladado desde la Picota en Bogotá a la cárcel de máxima seguridad de Palo Gordo en Girón Santander, siendo que está próximo a cumplir su pena. Estas prácticas nepotistas y clientelistas riñen con los principios de mérito, transparencia y moralidad administrativa exigidos por la Constitución para el ejercicio de la función pública (artículos 125, 126 y 209 C.P.).<br>
+              <em>Endurecimiento migratorio y deportaciones express:</em> Emitió directrices ordenando operativos masivos de expulsión inmediata de extranjeros en situación irregular, afectando principalmente a la diáspora venezolana. Estas medidas contradicen los tratados internacionales ratificados por Colombia en materia de refugio y protección de personas migrantes, así como el derecho fundamental al debido proceso, al no garantizarse el análisis caso por caso.
+            </p>
+
+            <p>
+              <strong>D. Desprecio por los derechos humanos y la libertad de expresión:</strong><br>
+              <em>Proselitismo político en medio de la tragedia humanitaria causada por el terremoto:</em> Llegó a las zonas afectadas por el terremoto incluyendo el Chocó, arrojándole balones a los niños con el logo de su campaña, mientras miles de familias esperaban alimentos, vivienda, salud y ayuda humanitaria urgente. Usó el dolor de los colombianos como escenario publicitario. De igual manera, celebró los resultados de la operación “Azarías”, efectuada el pasado 30 de agosto en el departamento del Guaviare, donde fueron abatidos integrantes de las disidencias de las FARC. Las imágenes lo muestran celebrando como un trofeo, caminando entre los cadáveres entre estos los de varios menores, envueltos en sábanas blancas, lo que ha causado el repudio y el asombro tanto nacional como mundial, nunca un Presidente de Colombia había tenido tal actitud deshumanizante.<br>
+              <em>Bombardeos contra población civil:</em> En el Catatumbo, en la vereda Sinaí del municipio de San Calixto, se produjeron bombardeos que dejaron campesinos heridos y daños a viviendas, en violación del derecho internacional humanitario y del derecho fundamental a la vida.<br>
+              <em>Ataque a la libertad de expresión:</em> Ordenó la reorganización de RTVC y la suspensión de la programación de 20 emisoras de paz, creadas en virtud del Acuerdo Final de Paz, vulnerando los derechos a la libertad de expresión, de prensa y a la paz.<br>
+              <em>Reconocimiento ilegítimo de los Altos del Golán:</em> En plena crisis sísmica, decidió sumarse al reconocimiento de los Altos del Golán como territorio de Israel, sin debate ni respaldo institucional, poniendo en riesgo las relaciones diplomáticas y los intereses de Colombia.
+            </p>
+          </div>
+
+          <p>
+            <strong>6. EL PERJUICIO IRREMEDIABLE YA SE CONSUMÓ Y SE PROLONGARÁ:</strong><br>
+            El Consejo de Estado puede tardar hasta un (1) año en resolver la demanda de nulidad electoral, conforme lo dispone el Parágrafo del artículo 264 de la Constitución Nacional. Durante ese largo lapso, el señor de la Espriella continuará ejerciendo la Presidencia, vulnerando la Constitución Nacional, la soberanía, la justicia, la paz y el futuro del país, derrochando el presupuesto nacional, como ocurre con el gasto innecesario, que implica la utilización de un helicóptero, para su desplazamiento a cualquier lugar donde se le ocurra, profundizando cada día el daño y haciendo irreversible la vulneración a los derechos de los colombianos. La vía de la tutela es el único mecanismo judicial capaz de proteger a la ciudadanía ante este perjuicio irremediable causado por una persona que además ha dado muestras de ser además de narcisista, un mitómano, al mentirle constantemente al país, como por ejemplo hacerse pasar como “brujo” y recientemente haberle reportado al Estado, según aparece en el RUI (Registro Universal de Ingresos), con clasificación CO3 con vulnerabilidad y riesgo de caer en la pobreza, siendo que es uno de los más multimillonarios de Colombia, y a la DIAN en su declaración de renta correspondiente al año gravable 2024, presentada en el 2025, le reportó que no tenía esposa o cónyuge e inconsistencias sobre su patrimonio, cuentas bancarias, sociedades e ingresos, lo que corrigió posteriormente, como consecuencia de la publicidad que se le hizo a su declaración de renta, en el mes de agosto de 2026.
+          </p>
+
+          <h4 class="font-bold text-slate-950 uppercase border-b border-slate-300 pb-1 mt-6">
+            II. PETICIÓN CONCRETA
+          </h4>
+
+          <p>Con fundamento en lo expuesto, solicitamos respetuosamente a la Honorable Corte Suprema de Justicia:</p>
+
+          <ol class="list-decimal list-inside space-y-2 pl-2">
+            <li><strong>ADMITIR Y RECIBIR</strong> el presente memorial de apoyo y respaldo, junto con el listado de firmas adheridas, como expresión de la voluntad colectiva de millones de colombianos que nos vemos afectados por las violaciones denunciadas.</li>
+            <li><strong>ACOGER</strong> íntegramente los argumentos de la impugnación presentada por el ciudadano doctor Gabriel Jorge Triana Perdomo, así como los hechos adicionales aquí expuestos.</li>
+            <li><strong>REVOCAR</strong> el fallo de primera instancia proferido por la Sala Quinta de Decisión Civil del Tribunal Superior del Distrito Judicial de Bogotá, que negó la acción de tutela.</li>
+            <li><strong>CONCEDER</strong> el amparo de los derechos fundamentales invocados y, en consecuencia, <strong>ORDENAR: LA SUSPENSIÓN PROVISIONAL</strong> de los actos de declaratoria de elección y el ejercicio del cargo como Presidente de la República, del señor ABELARDO GABRIEL DE LA ESPRIELLA OTERO, mientras se resuelve de fondo la nulidad electoral ante el Consejo de Estado.</li>
+            <li><strong>ORDENAR</strong> a la Fiscalía General de la Nación la reanudación urgente de las investigaciones penales correspondientes, en particular la del caso "Torres Gemelas", y el conjunto de presuntos delitos, en los que aparece vinculado el ahora Presidente de la Espriella Otero, que ya pueda estar conociendo la fiscalía, así como los publicados el día primero (1) de junio de 2026, en el medio de comunicación “La Nueva Prensa”, en cumplimiento de su deber constitucional de investigar de oficio los delitos que se presumen cometidos.</li>
+            <li><strong>ORDENAR</strong> al Consejo Nacional Electoral y a la Registraduría Nacional del Estado Civil la rendición de informe detallado sobre la doble nacionalidad y las irregularidades en las firmas de apoyo a la candidatura presidencial del señor de la Espriella Otero.</li>
+          </ol>
+
+          <h4 class="font-bold text-slate-950 uppercase border-b border-slate-300 pb-1 mt-6">
+            III. COMPROMISO
+          </h4>
+
+          <p class="italic">
+            Los abajo firmantes, no permaneceremos indiferentes ante la violación sistemática de los derechos de los colombianos ni ante el atropello de las instituciones que hemos construido y el esfuerzo de generaciones. La soberanía reside en el pueblo, y es el pueblo quien, a través de sus representantes y de sus ciudadanos, debe velar por el cumplimiento de la Constitución Nacional, la ley, el ejercicio de la justicia y la defensa de los derechos humanos, la dignidad, el estado social de derecho y la soberanía nacional.
+          </p>
+
+          <div class="pt-8 text-center text-xs text-slate-500 uppercase tracking-wider">
+            [Listado anexo de ciudadanos y ciudadanas colombianas coadyuvantes adjunto vía formulario electrónico]
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER INSTITUCIONAL Y CIUDADANO -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 pb-8 border-b border-slate-800/80">
+        
+        <div class="md:col-span-6 space-y-3">
+          <div class="flex items-center space-x-2 text-white font-bold text-base font-display-title">
+            <i class="fas fa-balance-scale text-amber-500"></i>
+            <span>MEMORIAL CIUDADANO • COLOMBIA</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-md">
+            Iniciativa cívica independiente en ejercicio del derecho constitucional a la coadyuvancia jurídica (Decreto 2591 de 1991). No persigue fines partidistas particulares sino la defensa irrestricta de la Carta Política de 1991 y la soberanía de la Nación.
+          </p>
+          <div class="text-[11px] text-slate-500">
+            Radicado Judicial: <span class="font-mono text-slate-300">11001-2203-000-2026-03364-00</span> • Sala de Casación Civil CSJ
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider">Enlaces Directos</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="#accionante" class="hover:text-amber-400 transition">Perfil del Dr. Triana Perdomo</a></li>
+            <li><a href="#motivos" class="hover:text-amber-400 transition">Exposición de Motivos</a></li>
+            <li><a href="#peticiones" class="hover:text-amber-400 transition">Peticiones Concretas</a></li>
+            <li><a href="#memorial-reader" class="hover:text-amber-400 transition">Texto del Memorial</a></li>
+            <li><a href="https://forms.gle/UrTeZuqjvCvnhndD7" target="_blank" rel="noopener" class="text-amber-400 font-semibold hover:underline">Formulario Oficial (Google Forms)</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider">Soberanía Popular</h4>
+          <p class="text-xs text-slate-400 italic">
+            "La soberanía reside exclusivamente en el pueblo, del cual emana el poder público. El pueblo la ejerce en forma directa o por medio de sus representantes."
+          </p>
+          <div class="text-amber-400 text-xs font-bold">
+            — Artículo 3°, Constitución Política de Colombia.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
+        <div>
+          Bogotá D.C., Colombia • 2026
+        </div>
+        <div>
+          Respaldo ciudadano en defensa de la justicia y los derechos fundamentales
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL PARA FORMULARIO DE GOOGLE FORMS EMBEBIDO -->
+  <div id="form-embed-modal" class="modal-wrapper hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] border border-slate-300 animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Cabecera del modal -->
+      <div class="bg-slate-900 text-white px-5 py-3.5 flex justify-between items-center border-b border-slate-800">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-file-signature text-amber-400"></i>
+          <span class="font-bold text-sm sm:text-base">Formulario de Coadyuvancia Ciudadana</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <a href="https://forms.gle/UrTeZuqjvCvnhndD7" target="_blank" rel="noopener" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-300 px-3 py-1 rounded transition hidden sm:inline-block">
+            <i class="fas fa-arrow-up-right-from-square mr-1"></i> Abrir en pestaña
+          </a>
+          <button onclick="closeModal('form-embed-modal')" class="text-slate-400 hover:text-white p-1 text-lg leading-none" aria-label="Cerrar modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Iframe de Google Forms -->
+      <div class="flex-1 w-full bg-slate-100 overflow-hidden relative min-h-[500px]">
+        <iframe 
+          src="https://forms.gle/UrTeZuqjvCvnhndD7" 
+          class="w-full h-full min-h-[550px] border-0" 
+          title="Formulario de Coadyuvancia de Google Forms"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Pie del modal -->
+      <div class="bg-slate-50 px-5 py-3 border-t border-slate-200 flex flex-wrap justify-between items-center gap-2 text-xs text-slate-500">
+        <span>¿Problemas para visualizar? Puedes responder directamente en Google:</span>
+        <a href="https://forms.gle/UrTeZuqjvCvnhndD7" target="_blank" rel="noopener" class="font-bold text-red-600 hover:text-red-700 underline flex items-center gap-1">
+          Abrir en Pantalla Completa <i class="fas fa-external-link-alt text-[10px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL PARA LEER MEMORIAL COMPLETO -->
+  <div id="memorial-modal" class="modal-wrapper hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] border border-slate-300">
+      <div class="bg-slate-900 text-white px-5 py-3.5 flex justify-between items-center border-b border-slate-800">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-landmark text-amber-400"></i>
+          <span class="font-bold text-sm sm:text-base">Memorial Oficial de Tutela (Segunda Instancia)</span>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button onclick="printMemorial()" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-300 px-3 py-1 rounded transition">
+            <i class="fas fa-print mr-1"></i> Imprimir
+          </button>
+          <button onclick="closeModal('memorial-modal')" class="text-slate-400 hover:text-white p-1 text-lg leading-none" aria-label="Cerrar modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 p-6 sm:p-10 overflow-y-auto font-serif-legal text-slate-800 text-sm leading-relaxed space-y-4">
+        <div class="text-center font-bold text-slate-950 pb-4 border-b border-slate-200">
+          MEMORIAL CIUDADANO DEL PUEBLO COLOMBIANO, EN RESPALDO COMO COADYUVANTES DE LA IMPUGNACIÓN<br>
+          <span class="text-xs text-slate-500 font-mono font-normal">Radicado N° 11001-2203-000-2026-03364-00</span>
+        </div>
+        <p><strong>Bogotá D.C., 1 de septiembre 2026</strong></p>
+        <p>Señores Magistrados<br><strong>SALA DE CASACIÓN CIVIL - HONORABLE CORTE SUPREMA DE JUSTICIA</strong></p>
+        <p>El memorial completo se encuentra visible en la sección inferior de esta página web con opción de descarga e impresión formal.</p>
+        <div class="text-center pt-4">
+          <a href="#memorial-reader" onclick="closeModal('memorial-modal')" class="inline-block bg-slate-900 text-amber-400 px-5 py-2.5 rounded-xl font-sans font-bold text-xs">
+            Ir al lector completo en la página
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    // Función auxiliar para copiar el texto del memorial
+    function copyMemorialText() {
+      const textEl = document.getElementById('memorial-content-text');
+      if (!textEl) return;
+      
+      const fullText = textEl.innerText;
+      navigator.clipboard.writeText(fullText).then(() => {
+        showToast("¡Texto completo del memorial copiado al portapapeles!");
+      }).catch(() => {
+        showToast("No se pudo copiar automáticamente.");
+      });
+    }
+  </script>
+</body>
+</html>
