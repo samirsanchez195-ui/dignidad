@@ -251,3 +251,45 @@ function showToast(message) {
 window.printMemorial = function() {
   window.print();
 };
+
+/* Administración Remota */
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "Dignidad2026!";
+
+window.handleAdminLogin = function(e) {
+  e.preventDefault();
+  const userInput = document.getElementById('admin-username');
+  const passInput = document.getElementById('admin-password');
+  const errorDiv = document.getElementById('admin-login-error');
+
+  const user = userInput ? userInput.value.trim() : "";
+  const pass = passInput ? passInput.value.trim() : "";
+
+  if (user === ADMIN_USER && pass === ADMIN_PASS) {
+    if (errorDiv) errorDiv.classList.add('hidden');
+    closeModal('admin-login-modal');
+    openModal('admin-panel-modal');
+    showToast("¡Sesión de administrador iniciada!");
+  } else {
+    if (errorDiv) errorDiv.classList.remove('hidden');
+  }
+};
+
+window.saveAdminChanges = function() {
+  const newFormUrlInput = document.getElementById('admin-edit-form-url');
+  const newAlertTextInput = document.getElementById('admin-edit-alert-text');
+
+  if (newFormUrlInput && newFormUrlInput.value.trim()) {
+    localStorage.setItem('custom_form_url', newFormUrlInput.value.trim());
+  }
+  if (newAlertTextInput && newAlertTextInput.value.trim()) {
+    const val = newAlertTextInput.value.trim();
+    localStorage.setItem('custom_alert_text', val);
+    const alertEl = document.querySelector('.bg-gradient-to-r span.font-medium');
+    if (alertEl) alertEl.textContent = val;
+  }
+
+  closeModal('admin-panel-modal');
+  showToast("¡Cambios aplicados correctamente!");
+};
+
